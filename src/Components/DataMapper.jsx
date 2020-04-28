@@ -1,11 +1,13 @@
 import React from "react";
 
-function DataMapper(props) {
-  const stateItems = props.state.map((stateItem) => {
-    return <li>{stateItem}</li>;
+import CountryCard from "./CountryCard";
+
+function DataMapper({ countries }) {
+  const countriesList = countries.map((country) => {
+    return <CountryCard country={country} />;
   });
 
-  return <ul>{stateItems}</ul>;
+  return <ul>{countriesList}</ul>;
 }
 
 export default DataMapper;
